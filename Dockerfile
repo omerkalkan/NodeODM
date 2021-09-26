@@ -1,5 +1,5 @@
 FROM omerfarukkalkan/odm:latest
-MAINTAINER Piero Toffanin <pt@masseranolabs.com>
+MAINTAINER Omer Faruk Kalkan <omer.kalkan@netcad.com>
 
 EXPOSE 3000
 
