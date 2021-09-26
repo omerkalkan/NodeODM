@@ -42,4 +42,4 @@ jobs:
         push: true
         tags: |
           ${{ steps.docker_meta.outputs.tags }}
-          opendronemap/nodeodm:latest
+          omerfarukkalkan/nodeodm:latest
