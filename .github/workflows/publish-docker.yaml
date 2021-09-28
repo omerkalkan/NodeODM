@@ -25,14 +25,6 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    # Use the repository information of the checked-out code to format docker tags
-    - name: Docker meta
-      id: docker_meta
-      uses: crazy-max/ghaction-docker-meta@v1
-      with:
-        images: opendronemap/nodeodm
-        tag-semver: |
-          {{version}}
     - name: Build and push Docker image
       id: docker_build
       uses: docker/build-push-action@v2
@@ -40,6 +32,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/amd64,linux/arm64
         push: true
-        tags: |
-          ${{ steps.docker_meta.outputs.tags }}
-          omerfarukkalkan/nodeodm:latest
+        tags: omerfarukkalkan/nodeodm:latest
